@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Todo",
+  "description": "Extension to manage a to-do list",
+  "author": "Idowu Micheal",
+  "version": "1.0.1",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["storage"],
+  "icons": {
+    "16": "./favicon.png",
+    "32": "./favicon.png",
+    "48": "./favicon.png",
+    "128": "./favicon.png"
+  }
+}

@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/JosefinSans-Bold.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/JosefinSans-Light.ttf") format("ttf");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/JosefinSans-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/JosefinSans-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("/fonts/JosefinSans-Thin.ttf") format("ttf");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  @apply w-5 h-5 rounded-full border-2 border-gray-300 bg-white cursor-pointer transition-all duration-300 ease-in-out relative;
+}
+
+.custom-checkbox:checked {
+  @apply border-none;
+  background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  
+}
+
+.custom-checkbox:checked::after {
+   content: url('../assets/images/icon-check.svg');
+  @apply absolute left-1 text-white text-sm;
+}
+
+/* New rule for full-width border */
+.full-width-border {
+  position: relative;
+}
+
+.full-width-border::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(-1 * var(--ul-padding, 1rem)); /* Adjusts for ul padding */
+  right: calc(-1 * var(--ul-padding, 1rem));
+  height: 1px;
+  background: #e5e7eb; 
+}
+
+/* .full-width-border:last-child::before {
+  display: none;
+} */
